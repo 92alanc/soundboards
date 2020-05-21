@@ -14,14 +14,16 @@ android {
     }
 
     signingConfigs {
-        legacyFree {
+        // To be used with alborghettiFree flavour
+        legacy {
             keyAlias System.getenv("KEY_ALIAS_CARCADAS")
             keyPassword System.getenv("KEY_PASSWORD_CARCADAS")
             storeFile file(System.getenv("STORE_FILE_CARCADAS_FREE"))
             storePassword System.getenv("STORE_PASSWORD_CARCADAS")
         }
 
-        legacyPaid {
+        // To be used with other flavours
+        soundboards {
             keyAlias System.getenv("KEY_ALIAS_CARCADAS")
             keyPassword System.getenv("KEY_PASSWORD_CARCADAS")
             storeFile file(System.getenv("STORE_FILE_CARCADAS_PAID"))
@@ -55,7 +57,7 @@ android {
             dimension "mode"
             versionCode 48
             versionName "2020.1.2"
-            signingConfig signingConfigs.legacyFree
+            signingConfig signingConfigs.legacy
         }
 
         paid {
@@ -66,7 +68,7 @@ android {
             buildConfigField "String", "BASE_URL", '"https://api.dropboxapi.com/"'
             buildConfigField "String", "BASE_URL_DOWNLOADS", '"https://content.dropboxapi.com/"'
             buildConfigField "String", "ACCESS_TOKEN", "\"$System.env.ACCESS_TOKEN_CARCADAS\""
-            signingConfig signingConfigs.legacyPaid
+            signingConfig signingConfigs.soundboards
         }
     }
 

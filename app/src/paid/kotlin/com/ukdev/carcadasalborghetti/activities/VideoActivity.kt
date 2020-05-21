@@ -6,9 +6,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.MediaController
+import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.ukdev.carcadasalborghetti.R
-import kotlinx.android.synthetic.paid.activity_video.*
 
 class VideoActivity : AppCompatActivity(R.layout.activity_video) {
 
@@ -28,6 +29,7 @@ class VideoActivity : AppCompatActivity(R.layout.activity_video) {
     }
 
     private fun configureActionBar() {
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.let { actionBar ->
             actionBar.setDisplayHomeAsUpEnabled(true)
@@ -36,7 +38,8 @@ class VideoActivity : AppCompatActivity(R.layout.activity_video) {
     }
 
     private fun startPlayback() {
-        with(video_view) {
+        val videoView = findViewById<VideoView>(R.id.video_view)
+        with(videoView) {
             setVideoURI(url)
             setMediaController(MediaController(context).also { it.setAnchorView(this) })
             start()
