@@ -5,12 +5,38 @@
     <string-array name="titles">
         <item>Ta brincando comigo? É pegadinha?</item>
         <item>Aqui eu subi no inferno</item>
+        <item>Você é a vergonha da profissão</item>
+        <item>Cala a boca</item>
+        <item>Eu não quero mais te ver hoje</item>
+        <item>Menina fecha o restaurante</item>
+        <item>Não quero mais ver ninguém aqui</item>
+        <item>Desliga o freezer à noite</item>
+        <item>Não tem desculpa</item>
+        <item>Para de trabalhar</item>
+        <item>Sem vergonha</item>
+        <item>Chega um fiscal aqui todo mundo ta ferrado</item>
+        <item>Ta me ouvindo?</item>
+        <item>Cala sua boca</item>
+        <item>OW CALA A BOCA!!!</item>
     </string-array>
 
     <!-- Audios -->
     <array name="audios">
         <item>@raw/aud001</item>
         <item>@raw/aud002</item>
+        <item>@raw/aud003</item>
+        <item>@raw/aud004</item>
+        <item>@raw/aud005</item>
+        <item>@raw/aud006</item>
+        <item>@raw/aud007</item>
+        <item>@raw/aud008</item>
+        <item>@raw/aud009</item>
+        <item>@raw/aud010</item>
+        <item>@raw/aud011</item>
+        <item>@raw/aud012</item>
+        <item>@raw/aud013</item>
+        <item>@raw/aud014</item>
+        <item>@raw/aud015</item>
     </array>
 
 </resources>
